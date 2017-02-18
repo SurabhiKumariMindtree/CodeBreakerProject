@@ -18,6 +18,8 @@ function setHiddenFields() {
 function guess() {
     if (answer == '' || attempt == ' ')
         setHiddenFields();
+    getResults();
+
 }
 
 function setMessage(answer) {
@@ -36,4 +38,14 @@ if (validateInput(input.value) == true) {
     attempt = attempt + 1;
 } else {
     return false;
+}
+
+function getResults(param) {
+    var countres = 0;
+
+}
+if (getResults() == true) {
+    setMessage("You Win");
+} else {
+    setMessage("You Loose");
 }
