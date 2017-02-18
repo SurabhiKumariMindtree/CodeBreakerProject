@@ -3,49 +3,78 @@ let attempt = document.getElementById('attempt');
 
 function guess() {
     let input = document.getElementById('user-guess');
-    //add functionality to guess function here
-}
-
-function setHiddenFields() {
-    answer = Math.floor((Math.random() * 100000) + 1);
-    var str = answer.toString();
-    while (str.length() < 4) {
-        str = '0' + str;
-    }
-    attempt = 0;
-}
-
-function guess() {
-    if (answer == '' || attempt == ' ')
+    if (answer.value == ' ' || attempt.value == ' ') {
         setHiddenFields();
-    getResults();
-
-}
-
-function setMessage(answer) {
-    messsage = document.getElementByName(answer).innerHTML;
-}
-
-function validateInput(answer) {
-    if (answer.length == 4) {
-        return true;
+    }
+    if (!validateInput(input.value)) {
+        return;
+    }
+    attempt.value++;
+    if (getResults(input.value)) {
+        setMessage('You Win! :)');
+        showAnswer(true);
+        showReplay();
+    } else if (attempt.value >= 10) {
+        setMessage('You Lose! :)');
+        showAnswer(false);
+        showReplay();
     } else {
-        setMessage("Guesses must be exactly 4 characters long.");
-        return false;
+        setMessage('Incorrect, try again');
     }
 }
-if (validateInput(input.value) == true) {
-    attempt = attempt + 1;
-} else {
+
+function getResults(input) {
+    let html = '<div class="row"><span class="col-md-6">' + input + '</span><div class="col-md-6">';
+    for (i = 0; i < input.length; i++) {
+        if (input.charAt(i) == answer.value.charAt(i)) {
+            html += '< span class = "glyphicon glyphicon - ok " > < /span>';
+        } else if (answer.value.indexOf(input.charAt(i)) > -1) {
+            html += '< span class = " glyphicon glyphicon - transfer " > < /span>';
+        } else {
+            html += ' < span class = " glyphicon glyphicon - remove " > < /span>';
+        }
+    }
+    html += '</div></div>';
+    document.getElementById('results').innetHTML += html;
+
+    if (input == answe.value) {
+        return true;
+    }
     return false;
 }
 
-function getResults(param) {
-    var countres = 0;
-
+function setHiddenFields() {
+    answer.value = Math.floor(Math.random() * 100000).toString();
+    while (answer.value.length < 4) {
+        answer.value = "0" + answer.value;
+    }
+    attempt.value = "0";
 }
-if (getResults() == true) {
-    setMessage("You Win");
-} else {
-    setMessage("You Loose");
+
+function setMessage(message) {
+    document.getElementById('message').innerHTML = message;
+}
+
+function showAnswer(success) {
+    let code = document.get('code');
+    if (success) {
+        code.className += 'success';
+    } else {
+        code.className += 'failure';
+    }
+    code.innerHTML = answer.value;
+}
+
+function showReplay() {
+    document.getElementById('guessing-div').style.display = "none";
+    document.getElementById('replay-div').style.display = "block";
+}
+
+
+function validateInput(input) {
+    if (input.length != 4) {
+        setMessage('Guesses must be exactly 4 characters long.');
+        return false;
+    }
+    return true;
 }
