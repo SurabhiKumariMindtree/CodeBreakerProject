@@ -1,0 +1,50 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>Recommendation</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <!--<ion-slides [options]="slideOptions">
+
+        <ion-slide>
+            <img src="http://www.letuspublish.com/wp-content/uploads/2015/02/Happy-Holi-2015-Colorful-HD-wallpapers.jpg">
+        </ion-slide>
+
+        <ion-slide>
+            <img src="http://1.bp.blogspot.com/-WcGowy8myJE/VLo6lTbVWHI/AAAAAAAAAEw/ki8DySFyBrk/s1600/holi-wallpaper-11-12x9.jpg">
+        </ion-slide>
+
+
+    </ion-slides>-->
+    <ion-slides>
+        <ion-slide>
+            <img class="slideImg" src="./assets/images/gameofthrones1.jpg">
+            <p>"Best book in the library...."</p>
+            <button ion-button large clear icon-right color="primary" (click)="next(slides, 1)">
+      </button>
+        </ion-slide>
+        <ion-slide>
+            <h5 class="userManualHeading">Game OF Thrones Part2</h5>
+            <img class="slideImg" src="./assets/images/gameofthrones2.jpg">
+            <p>Story of Cynderela</p>
+        </ion-slide>
+        <ion-slide>
+            <h5 class="userManualHeading">Game OF Thrones Part3</h5>
+            <img class="slideImg" src="./assets/images/gameofthrones3.jpg">
+            <p>Story of Alice in WonderLand</p>
+        </ion-slide>
+        <ion-slide>
+            <h5 class="userManualHeading">Game OF Thrones Part4</h5>
+            <img class="slideImg" src="./assets/images/gameofthrones4.jpg">
+            <p>Story of the Jungle Book</p>
+        </ion-slide>
+        <ion-slide>
+            <h5 class="userManualHeading">Game OF Thrones Part5</h5>
+            <img class="slideImg" src="./assets/images/gameofthrone5.jpg">
+            <p>Story of the prince of narnia</p>
+        </ion-slide>
+    </ion-slides>
+</ion-content>

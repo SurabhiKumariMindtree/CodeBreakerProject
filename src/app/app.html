@@ -1,0 +1,49 @@
+<ion-menu [content]="content">
+<ion-content>
+        <ion-list-header>
+   
+                 <div class="image-content" style="margin-top: 15px;">
+                  <img src="https://img.clipartfest.com/6e64a4f961e27a821feb8071da9fe0a4_female-user-icon-clip-art-clipart-user-icon_300-300.png" style="border-color: black; height:110px;width:110px;border-radius: 50%;">
+                 </div>
+        
+                 <div class="user-name" style="font-size:2.2rem;margin-top:10px;">
+                     Ankita Gupta
+                </div>
+               
+       </ion-list-header>
+       
+       <ion-list>
+             <ion-row>
+                   <button menuClose ion-item (click)="openBookRead()"> 
+                    <ion-col width-5><ion-icon name="book"></ion-icon></ion-col>
+                     <ion-col width-80>Books Read</ion-col>
+                     
+                    </button>
+             </ion-row>
+             <ion-row> 
+                   <button menuClose ion-item (click)="openRecommendation()">
+                    <ion-col width-10><ion-icon name="flower"></ion-icon></ion-col>
+                     <ion-col width-80>Recommendation</ion-col>
+                
+                   </button>
+             </ion-row>
+           <ion-row>    
+               <button menuClose ion-item (click)="openWishList()">
+                  <ion-col width-10><ion-icon name="heart-outline"></ion-icon></ion-col>
+                  <ion-col width-10> Wish List</ion-col>
+                   
+                </button>
+         </ion-row>
+
+           <ion-row>
+               <button menuClose ion-item (click)="doLogout()"> 
+                   <ion-col width-10><ion-icon name="log-out"></ion-icon></ion-col>
+                   <ion-col width-80>Logout</ion-col>
+                   
+                </button>
+           </ion-row>        
+     </ion-list>
+   
+    </ion-content>
+</ion-menu>
+<ion-nav [root]="rootPage" #content></ion-nav>
