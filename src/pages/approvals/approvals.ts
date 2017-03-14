@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import {HomePage} from '../home/home';
+import {HomePage} from './pages/home/home'
 /*
   Generated class for the Approvals page.
 
@@ -15,13 +15,14 @@ export class ApprovalsPage {
 
   constructor(public nav: NavController, public navParams: NavParams) {}
 
-  home()
-  {
-  this.nav.setRoot(HomePage);
-  }
-
   ionViewDidLoad() {
     console.log('ionViewDidLoad ApprovalsPage');
   }
+
+  // home()
+  // {
+  //   this.nav.setRoot(HomePage);
+
+  // }
 
 }

@@ -2,21 +2,21 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 /*
-  Generated class for the TransferAdmin page.
+  Generated class for the Reports page.
 
   See http://ionicframework.com/docs/v2/components/#navigation for more info on
   Ionic pages and navigation.
 */
 @Component({
-  selector: 'page-transfer-admin',
-  templateUrl: 'transfer-admin.html'
+  selector: 'page-reports',
+  templateUrl: 'reports.html'
 })
-export class TransferAdminPage {
+export class ReportsPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad TransferAdminPage');
+    console.log('ionViewDidLoad ReportsPage');
   }
 
 }
