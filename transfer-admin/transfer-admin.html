@@ -1,0 +1,74 @@
+<!--
+  Generated template for the TransferAdmin page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-title>
+            <ion-icon name="home" (click)="home()"></ion-icon> Kalinga Library
+        </ion-title>
+    </ion-toolbar>
+    <ion-navbar color="secondary">
+        <ion-title class="titleji">
+            Admin Acess
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<!--<ion-content>
+    <ion-card>
+        <ion-card-header></ion-card-header>
+        <ion-card>
+</ion-content>-->
+<ion-content>
+    <ion-card>
+        <ion-card-header></ion-card-header>
+        <ion-card-content>
+            <h2>
+                <p>
+                    Name :
+                </p>
+            </h2>
+            <h2>
+                <p>
+                    MID :
+                </p>
+            </h2>
+            <h2>
+                <p>
+                    Email :
+                </p>
+            </h2>
+            <h2>
+                <p>
+                    Select Admin :
+                </p>
+            </h2>
+            <!--<div class="dropdown">
+                <button class="dropbtn">Dropdown</button>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>-->
+            <select name="dropdown">
+    <option value="nothing">Select Admin</option>
+    <option value="pyaribehna">Ankita</option>
+    <option value="macha">Kushal</option>
+    <option value="lovebhaiya">Prem</option>
+    <option value="surabhi">Surabhi</option>
+    <option value="chachu">Vinay</option>
+    
+    
+  </select>
+            <br>
+            <br>
+            <button ion-button (click)="save()">Save</button>
+            <button ion-button (click)="cancel()">Cancel</button>
+        </ion-card-content>
+    </ion-card>
+</ion-content>
