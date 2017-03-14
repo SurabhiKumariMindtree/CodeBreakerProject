@@ -1,45 +1,32 @@
-
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-import {HelpPage} from '../pages/help/help';
-import { NotificationPage } from '../pages/notification/notification';
-import { SearchPage } from './../pages/search/search';
 import { HomePage } from '../pages/home/home';
-import { TabsPage } from '../pages/tabs/tabs';
-import {BookReadPage} from '../pages/bookRead/bookRead';
-import {RecommendationPage} from '../pages/recommendation/recommendation';
-import {WishListPage} from '../pages/wishList/wishList';
-
-
+import {ListPage} from '../pages/list/list';
+import {RolesPage} from '../pages/roles/roles';
+import {ApprovalsPage} from '../pages/approvals/approvals';
+import {TransferAdminPage} from '../pages/transfer-admin/transfer-admin';
 @NgModule({
   declarations: [
     MyApp,
-    SearchPage,
-    HelpPage,
-    NotificationPage,
     HomePage,
-    TabsPage,
-    RecommendationPage,
-    WishListPage,
-    BookReadPage
-
+    ListPage,
+    RolesPage,
+    ApprovalsPage,
+    TransferAdminPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
+ 
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    SearchPage,
-    HelpPage,
-    NotificationPage,
     HomePage,
-    TabsPage,
-     RecommendationPage,
-    WishListPage,
-    BookReadPage
-
+    ListPage,
+    RolesPage,
+    ApprovalsPage,
+    TransferAdminPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
